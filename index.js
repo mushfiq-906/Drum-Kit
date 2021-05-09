@@ -6,11 +6,13 @@ for(let i=0;i<document.querySelectorAll('button').length;i++)
          
 });
 
-
+let arr = ['w','a','s','d','j','k','l'];
 
 document.addEventListener('keypress',function(event){
     playSound(event.key);
-    buttonAnimation(event.key);
+    if(arr.includes(event.key)){
+        buttonAnimation(event.key);
+    }
 });
 
 function playSound(x){
